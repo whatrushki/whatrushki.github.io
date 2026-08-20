@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHAT Technologies — Архитектура цифрового опыта и разработка систем</title>
+
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="WHAT Technologies — технологическая лаборатория. Разработка высокопроизводительного софта, распределенной инфраструктуры и иммерсивных веб-интерфейсов.">
+    <meta name="keywords"
+        content="веб-разработка, архитектура систем, WebGL, WebGPU, Rust, Go, дизайн-системы, UI UX, WHAT technologies">
+    <meta name="author" content="WHAT Technologies">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://what.tech">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://what.tech">
+    <meta property="og:title" content="WHAT Technologies — Архитектура цифрового опыта">
+    <meta property="og:description"
+        content="Разработка высокопроизводительного ПО, распределенных систем и интерактивных интерфейсов.">
+    <meta property="og:image" content="logo.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WHAT Technologies">
+    <meta name="twitter:description" content="Архитектура цифрового опыта и системная инженерия.">
+    <meta name="twitter:image" content="logo.svg">
+
+    <!-- Schema.org JSON-LD for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WHAT Technologies",
+      "url": "https://what.tech",
+      "logo": "logo.svg",
+      "description": "Разработка высокопроизводительных систем, инфраструктуры и иммерсивных веб-интерфейсов.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@what.tech",
+        "contactType": "Customer Support"
+      }
+    }
+    </script>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-outline"></div>
+
+    <!-- Background Effects -->
+    <div class="ambient-glow"></div>
+    <div class="mouse-glow"></div>
+    <div class="background-grid"></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg width="290" height="134" viewBox="0 0 290 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M131.459 0.400391H141L131.372 102.4H120.791L116.714 50.2529L115.5 30.8729L114.286 50.2529L110.209 102.4H99.6276L90 0.400391H99.5408L103.878 62.4929L104.832 81.3629L106.133 62.4929L111.163 0.400391H119.837L124.867 62.4929L126.082 81.3629L127.122 62.4929L131.459 0.400391Z"
+                        fill="white" />
+                    <path d="M180.28 0H193.08V102.4H180.28V56.576H166.2V102.4H153.4V0H166.2V46.336H180.28V0Z"
+                        fill="white" />
+                    <path
+                        d="M231.694 102.4L230.05 82.6379H218.95L217.306 102.4H206L217.717 0.400391H231.283L243 102.4H231.694ZM219.772 72.4379H229.228L225.322 25.9004L224.5 14.5529L223.678 25.9004L219.772 72.4379Z"
+                        fill="white" />
+                    <path d="M289.96 0.201172V10.4412H275.88V102.601H263.08V10.4412H249V0.201172H289.96Z"
+                        fill="white" />
+                    <rect x="135" y="96.4004" width="6" height="6" fill="white" />
+                    <rect x="196" y="96.4004" width="6" height="6" fill="white" />
+                    <rect x="245" y="96.4004" width="6" height="6" fill="white" />
+                    <rect x="278" y="96.4004" width="6" height="6" fill="white" />
+                    <g clip-path="url(#clip0_preloader)">
+                        <path
+                            d="M78 133.4H6.63574C9.83939 113.664 14.7877 93.3585 22.3438 74.8135C40.3778 66.2522 60.1431 56.5565 78 47.1006V133.4ZM78 10.5732C51.3902 22.4262 33.8474 46.5798 22.3438 74.8135C14.4642 78.5541 6.91535 82.0786 0 85.2705V0.400391H78V10.5732Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_preloader">
+                            <rect width="78" height="133" fill="white" transform="translate(0 0.400391)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="preloader-slogan">WHAT <span>TECHNOLOGIES</span></div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <a href="#" class="nav-brand">
+            <div class="nav-logo">
+                <svg width="290" height="134" viewBox="0 0 290 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M131.459 0.400391H141L131.372 102.4H120.791L116.714 50.2529L115.5 30.8729L114.286 50.2529L110.209 102.4H99.6276L90 0.400391H99.5408L103.878 62.4929L104.832 81.3629L106.133 62.4929L111.163 0.400391H119.837L124.867 62.4929L126.082 81.3629L127.122 62.4929L131.459 0.400391Z"
+                        fill="white" />
+                    <path d="M180.28 0H193.08V102.4H180.28V56.576H166.2V102.4H153.4V0H166.2V46.336H180.28V0Z"
+                        fill="white" />
+                    <path
+                        d="M231.694 102.4L230.05 82.6379H218.95L217.306 102.4H206L217.717 0.400391H231.283L243 102.4H231.694ZM219.772 72.4379H229.228L225.322 25.9004L224.5 14.5529L223.678 25.9004L219.772 72.4379Z"
+                        fill="white" />
+                    <path d="M289.96 0.201172V10.4412H275.88V102.601H263.08V10.4412H249V0.201172H289.96Z"
+                        fill="white" />
+                    <rect x="135" y="96.4004" width="6" height="6" fill="white" />
+                    <rect x="196" y="96.4004" width="6" height="6" fill="white" />
+                    <rect x="245" y="96.4004" width="6" height="6" fill="white" />
+                    <rect x="278" y="96.4004" width="6" height="6" fill="white" />
+                    <g clip-path="url(#clip0_navbar)">
+                        <path
+                            d="M78 133.4H6.63574C9.83939 113.664 14.7877 93.3585 22.3438 74.8135C40.3778 66.2522 60.1431 56.5565 78 47.1006V133.4ZM78 10.5732C51.3902 22.4262 33.8474 46.5798 22.3438 74.8135C14.4642 78.5541 6.91535 82.0786 0 85.2705V0.400391H78V10.5732Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_navbar">
+                            <rect width="78" height="133" fill="white" transform="translate(0 0.400391)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#projects" class="nav-link">Проекты</a>
+            <a href="#founder" class="nav-link">Основатель</a>
+            <a href="#team" class="nav-link">Команда</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Theme Selector -->
+            <div class="theme-switcher" title="Сменить тему интерфейса">
+                <button class="theme-btn theme-btn-black active" data-theme-name="black"
+                    aria-label="Default Dark"></button>
+                <button class="theme-btn theme-btn-blue" data-theme-name="blue" aria-label="Navy Blue Theme"></button>
+                <button class="theme-btn theme-btn-burgundy" data-theme-name="burgundy"
+                    aria-label="Burgundy Theme"></button>
+                <button class="theme-btn theme-btn-orange" data-theme-name="orange" aria-label="Orange Theme"></button>
+                <button class="theme-btn theme-btn-green" data-theme-name="green" aria-label="Green Theme"></button>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-logo-container reveal">
+            <svg width="290" height="134" viewBox="0 0 290 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M131.459 0.400391H141L131.372 102.4H120.791L116.714 50.2529L115.5 30.8729L114.286 50.2529L110.209 102.4H99.6276L90 0.400391H99.5408L103.878 62.4929L104.832 81.3629L106.133 62.4929L111.163 0.400391H119.837L124.867 62.4929L126.082 81.3629L127.122 62.4929L131.459 0.400391Z"
+                    fill="white" />
+                <path d="M180.28 0H193.08V102.4H180.28V56.576H166.2V102.4H153.4V0H166.2V46.336H180.28V0Z"
+                    fill="white" />
+                <path
+                    d="M231.694 102.4L230.05 82.6379H218.95L217.306 102.4H206L217.717 0.400391H231.283L243 102.4H231.694ZM219.772 72.4379H229.228L225.322 25.9004L224.5 14.5529L223.678 25.9004L219.772 72.4379Z"
+                    fill="white" />
+                <path d="M289.96 0.201172V10.4412H275.88V102.601H263.08V10.4412H249V0.201172H289.96Z" fill="white" />
+                <rect x="135" y="96.4004" width="6" height="6" fill="white" />
+                <rect x="196" y="96.4004" width="6" height="6" fill="white" />
+                <rect x="245" y="96.4004" width="6" height="6" fill="white" />
+                <rect x="278" y="96.4004" width="6" height="6" fill="white" />
+                <g clip-path="url(#clip0_hero)">
+                    <path
+                        d="M78 133.4H6.63574C9.83939 113.664 14.7877 93.3585 22.3438 74.8135C40.3778 66.2522 60.1431 56.5565 78 47.1006V133.4ZM78 10.5732C51.3902 22.4262 33.8474 46.5798 22.3438 74.8135C14.4642 78.5541 6.91535 82.0786 0 85.2705V0.400391H78V10.5732Z"
+                        fill="white" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_hero">
+                        <rect width="78" height="133" fill="white" transform="translate(0 0.400391)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <h1 class="hero-slogan reveal">Архитектура цифрового опыта.<br><span>Инженерия без компромиссов.</span></h1>
+        <p class="hero-description reveal">Независимая технологическая лаборатория. Проектируем высокопроизводительные
+            системы, разрабатываем масштабируемую инфраструктуру и создаем иммерсивные веб-интерфейсы нового поколения.
+        </p>
+        <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">Изучить проекты <span class="btn-arrow">→</span></a>
+            <a href="#contact" class="btn btn-outline">Связаться с нами</a>
+        </div>
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+        <div class="section-header reveal">
+            <span class="mono-label">О лаборатории</span>
+            <h2 class="section-title">Инженерия и эстетика</h2>
+            <p class="section-subtitle">Мы объединяем строгую системную архитектуру и передовой визуальный дизайн.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text-huge reveal">
+                <p>Команда разработчиков, инженеров и дизайнеров, создающая программные продукты на стыке технологий и
+                    визуальной культуры. <strong>WHAT Technologies</strong> фокусируется на производительности,
+                    надежности и внимании к каждой детали взаимодействия.</p>
+            </div>
+
+            <div class="about-cards reveal">
+                <div class="mini-card">
+                    <div class="mini-card-num">01 / ARCHITECTURE</div>
+                    <h3 class="mini-card-title">Системная разработка</h3>
+                    <p class="mini-card-desc">Проектирование масштабируемых и отказоустойчивых сервисов на Rust, Go и
+                        TypeScript.</p>
+                </div>
+
+                <div class="mini-card">
+                    <div class="mini-card-num">02 / INTERFACES</div>
+                    <h3 class="mini-card-title">Иммерсивный Web</h3>
+                    <p class="mini-card-desc">Создание уникального интерактивного опыта с использованием WebGL, WebGPU и
+                        микроанимаций.</p>
+                </div>
+
+                <div class="mini-card">
+                    <div class="mini-card-num">03 / INFRASTRUCTURE</div>
+                    <h3 class="mini-card-title">DevOps и безопасность</h3>
+                    <p class="mini-card-desc">Развертывание Zero-Trust сетей, CI/CD пайплайнов и распределенной облачной
+                        инфраструктуры.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+        <div class="section-header reveal">
+            <span class="mono-label">Портфолио</span>
+            <h2 class="section-title">Наши разработки</h2>
+            <p class="section-subtitle">Стек технологий в действии — от прототипа до продакшн-систем.</p>
+        </div>
+
+        <div class="projects-filter-bar reveal">
+            <button class="filter-btn active" data-filter="all">Все проекты</button>
+            <button class="filter-btn" data-filter="infra">Инфраструктура</button>
+            <button class="filter-btn" data-filter="interfaces">Интерфейсы</button>
+            <button class="filter-btn" data-filter="labs">Лаборатория</button>
+        </div>
+
+        <div class="projects-grid reveal">
+            <!-- Dynamic projects rendered via JavaScript -->
+        </div>
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- FOUNDER SECTION -->
+    <section class="section" id="founder">
+        <div class="section-header reveal">
+            <span class="mono-label">Видение</span>
+            <h2 class="section-title">Основатель</h2>
+            <p class="section-subtitle">Философия проектирования, ориентированная на безупречное качество.</p>
+        </div>
+
+        <div class="founder-grid">
+            <div class="founder-visual reveal">
+                <canvas class="founder-graphic-canvas" id="founder-canvas"></canvas>
+                <div class="founder-avatar"></div>
+            </div>
+
+            <div class="founder-content reveal">
+                <h3 class="founder-name">W.H.A.T. Architect</h3>
+                <span class="founder-title">Основатель & Lead Architect</span>
+
+                <div class="founder-bio">
+                    <p>Привет. Я основатель <strong>WHAT Technologies</strong>. Наш фокус — создание продуктов, где
+                        высокая техническая надежность гармонично сочетается с продуманным дизайном и вниманием к
+                        деталям.</p>
+                </div>
+
+                <div class="founder-stats">
+                    <div class="stat-item">
+                        <span class="stat-val">10</span>
+                        <span class="stat-lbl">Лет опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">50M</span>
+                        <span class="stat-lbl">Запросов/день</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">15</span>
+                        <span class="stat-lbl">Open-Source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="section" id="team">
+        <div class="section-header reveal">
+            <span class="mono-label">Люди</span>
+            <h2 class="section-title">Команда</h2>
+            <p class="section-subtitle">Инженеры и дизайнеры, создающие надежные цифровые решения.</p>
+        </div>
+
+        <div class="team-grid reveal">
+            <!-- Dynamic team members rendered via JS -->
+        </div>
+        <div class="section-divider"></div>
+    </section>
+
+    <!-- CONTACT / FOOTER SECTION -->
+    <footer class="footer-container" id="contact">
+        <div class="footer-top">
+            <div class="footer-cta reveal">
+                <h2 class="footer-cta-title">Давайте создадим<br><span>что-то стоящее.</span></h2>
+                <p class="footer-cta-desc">Готовы обсудить ваш проект, архитектуру решения или совместную работу?
+                    Напишите нам на почту.</p>
+            </div>
+
+            <div class="footer-form-container reveal">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Александр" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email для связи</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="alex@example.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Сообщение или задача</label>
+                        <textarea id="message" name="message" class="form-input" rows="4"
+                            placeholder="Опишите ваш проект или вопрос..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Отправить сообщение</button>
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 WHAT Technologies. Все права защищены.
+            </div>
+            <div class="footer-socials">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL -->
+    <div class="project-modal" id="project-modal">
+        <div class="project-modal-backdrop" id="project-modal-backdrop"></div>
+        <div class="project-modal-content">
+            <button class="project-modal-close" id="project-modal-close" aria-label="Закрыть окно">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z"
+                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="project-modal-body" id="project-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- MAIN APP SCRIPT -->
+    <script>
+        let currentProjectsData = [];
+
+        // Safe loader supporting both HTTP/HTTPS (GitHub Pages) and local file:// fallback
+        document.addEventListener('DOMContentLoaded', () => {
+            initPreloader();
+
+            fetch('data.json')
+                .then(res => {
+                    if (!res.ok) throw new Error('Network response error');
+                    return res.json();
+                })
+                .then(data => {
+                    currentProjectsData = data.projects || [];
+                    renderContent(data);
+                    initializeInteractions();
+                })
+                .catch(err => {
+                    console.info("Using embedded default config fallback (normal on local file:// opens)", err);
+                    // Built-in fallback config
+                    const fallbackData = {
+                        "hero": {
+                            "slogan_start": "Архитектура цифрового опыта.",
+                            "slogan_highlight": "Инженерия без компромиссов.",
+                            "description": "Независимая технологическая лаборатория. Проектируем высокопроизводительные системы, разрабатываем масштабируемую инфраструктуру и создаем иммерсивные веб-интерфейсы нового поколения."
+                        },
+                        "about": {
+                            "title": "Инженерия и эстетика",
+                            "subtitle": "Мы объединяем строгую системную архитектуру и передовой визуальный дизайн.",
+                            "description_huge": "Команда разработчиков, инженеров и дизайнеров, создающая программные продукты на стыке технологий и визуальной культуры. <strong>WHAT Technologies</strong> фокусируется на производительности, надежности и внимании к каждой детали взаимодействия.",
+                            "cards": [
+                                {"num": "01 / ARCHITECTURE", "title": "Системная разработка", "desc": "Проектирование масштабируемых и отказоустойчивых сервисов на Rust, Go и TypeScript."},
+                                {"num": "02 / INTERFACES", "title": "Иммерсивный Web", "desc": "Создание уникального интерактивного опыта с использованием WebGL, WebGPU и микроанимаций."},
+                                {"num": "03 / INFRASTRUCTURE", "title": "DevOps и безопасность", "desc": "Развертывание Zero-Trust сетей, CI/CD пайплайнов и распределенной облачной инфраструктуры."}
+                            ]
+                        },
+                        "projects": [
+                            {
+                                "id": "proj-1",
+                                "category": "interfaces",
+                                "category_label": "Интерфейсы",
+                                "title": "W.H.A.T. OS",
+                                "description": "Интерактивная веб-среда рабочего стола с оконным менеджером, виртуальным терминалом и аппаратным ускорением.",
+                                "tech": ["JavaScript", "WebGL", "WebAudio API"],
+                                "long_description": "Экспериментальная веб-операционная система, работающая изолированно в браузере. Включает многооконный оконный менеджер, терминал с базовыми unix-командами, файловую систему в памяти и шейдерные фильтры постобработки.",
+                                "screenshots": ["https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"],
+                                "github_url": "https://github.com/",
+                                "download_url": ""
+                            },
+                            {
+                                "id": "proj-2",
+                                "category": "infra",
+                                "category_label": "Инфраструктура",
+                                "title": "Aura Core",
+                                "description": "Высокопроизводительный движок динамической стилизации интерфейсов с компиляцией в WebAssembly.",
+                                "tech": ["Rust", "WebAssembly", "CSS Engines"],
+                                "long_description": "Aura Core оптимизирует работу с динамическими стилями в нагруженных интерфейсах. Написан на Rust, компилируется в WASM и гарантирует 120 FPS.",
+                                "screenshots": ["https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop"],
+                                "github_url": "https://github.com/",
+                                "download_url": ""
+                            }
+                        ],
+                        "founder": {
+                            "name": "W.H.A.T. Architect",
+                            "role": "Основатель & Lead Architect",
+                            "image": "",
+                            "bio": "Привет. Я основатель <strong>WHAT Technologies</strong>. Наш фокус — создание продуктов, где высокая техническая надежность гармонично сочетается с продуманным дизайном и вниманием к деталям.",
+                            "stats": [
+                                {"value": "10", "label": "Лет опыта"},
+                                {"value": "50M", "label": "Запросов/день"},
+                                {"value": "15", "label": "Open-Source"}
+                            ]
+                        },
+                        "team": [
+                            {"id": "member-1", "name": "Alex Mercer", "role": "Systems Engineer", "image": "", "description": "Специалист по распределенным протоколам и низкоуровневой разработке на Rust и Go.", "github": "https://github.com", "telegram": "https://t.me"}
+                        ],
+                        "footer": {
+                            "cta_title_start": "Давайте создадим",
+                            "cta_title_highlight": "что-то стоящее.",
+                            "cta_description": "Готовы обсудить ваш проект, архитектуру решения или совместную работу? Напишите нам на почту.",
+                            "contact_email": "hello@what.tech",
+                            "copyright": "WHAT Technologies. Все права защищены.",
+                            "socials": [{"name": "GitHub", "url": "https://github.com"}, {"name": "Telegram", "url": "https://t.me"}]
+                        }
+                    };
+                    currentProjectsData = fallbackData.projects;
+                    renderContent(fallbackData);
+                    initializeInteractions();
+                });
+        });
+
+        function initializeInteractions() {
+            initThemeSwitcher();
+            initCustomCursor();
+            initMouseSpotlight();
+            initScrollReveal();
+            initProjectFilters();
+            initFounderCanvas();
+            initFounderTilt();
+            initContactForm();
+            initNavbarScroll();
+            initProjectModalEvents();
+            initMobileNav();
+        }
+
+        /* --- DYNAMIC RENDERER --- */
+        function renderContent(data) {
+            if (!data) return;
+
+            // Hero
+            if (data.hero) {
+                const slogan = document.querySelector('.hero-slogan');
+                if (slogan) slogan.innerHTML = `${data.hero.slogan_start}<br><span>${data.hero.slogan_highlight}</span>`;
+                const desc = document.querySelector('.hero-description');
+                if (desc) desc.textContent = data.hero.description;
+            }
+
+            // About
+            if (data.about) {
+                const title = document.querySelector('#about .section-title');
+                if (title) title.textContent = data.about.title;
+                const subtitle = document.querySelector('#about .section-subtitle');
+                if (subtitle) subtitle.textContent = data.about.subtitle;
+                const descHuge = document.querySelector('.about-text-huge');
+                if (descHuge) descHuge.innerHTML = `<p>${data.about.description_huge}</p>`;
+
+                const miniCards = document.querySelectorAll('.mini-card');
+                if (data.about.cards && miniCards.length > 0) {
+                    data.about.cards.forEach((c, idx) => {
+                        if (miniCards[idx]) {
+                            miniCards[idx].querySelector('.mini-card-num').textContent = c.num;
+                            miniCards[idx].querySelector('.mini-card-title').textContent = c.title;
+                            miniCards[idx].querySelector('.mini-card-desc').textContent = c.desc;
+                        }
+                    });
+                }
+            }
+
+            // Projects
+            if (data.projects && data.projects.length > 0) {
+                const projectsGrid = document.querySelector('.projects-grid');
+                if (projectsGrid) {
+                    projectsGrid.innerHTML = '';
+                    data.projects.forEach(project => {
+                        const card = document.createElement('a');
+                        card.className = 'project-card reveal active';
+                        card.href = '#';
+                        card.setAttribute('data-category', project.category);
+                        card.setAttribute('data-id', project.id);
+
+                        const techSpans = (project.tech || []).map(t => `<span class="project-tech-item">${t}</span>`).join('');
+
+                        card.innerHTML = `
+                            <div class="project-top">
+                                <span class="project-cat">${project.category_label || ''}</span>
+                                <div class="project-arrow">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6464L9.79289 4.5H5C4.72386 4.5 4.5 4.27614 4.5 4C4.5 3.72386 4.72386 3.5 5 3.5H11C11.2761 3.5 11.5 3.72386 11.5 4V10C11.5 10.2761 11.2761 10.5 11 10.5C10.7239 10.5 10.5 10.2761 10.5 10V5.20711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </div>
+                            </div>
+                            <div class="project-middle">
+                                <h3 class="project-title">${project.title}</h3>
+                                <p class="project-desc">${project.description}</p>
+                            </div>
+                            <div class="project-tech">${techSpans}</div>
+                        `;
+                        projectsGrid.appendChild(card);
+                    });
+                }
+            }
+
+            // Founder
+            if (data.founder) {
+                const founderName = document.querySelector('.founder-name');
+                if (founderName) founderName.textContent = data.founder.name;
+                const founderTitle = document.querySelector('.founder-title');
+                if (founderTitle) founderTitle.textContent = data.founder.role;
+
+                const bioContainer = document.querySelector('.founder-bio');
+                if (bioContainer && data.founder.bio) {
+                    bioContainer.innerHTML = '';
+                    data.founder.bio.split('\n\n').forEach(para => {
+                        const p = document.createElement('p');
+                        p.innerHTML = para;
+                        bioContainer.appendChild(p);
+                    });
+                }
+
+                const avatarContainer = document.querySelector('.founder-avatar');
+                if (avatarContainer) {
+                    avatarContainer.innerHTML = '';
+                    if (data.founder.image) {
+                        avatarContainer.innerHTML = `
+                            <div class="founder-scan-line"></div>
+                            <img src="${data.founder.image}" class="founder-image-img" alt="${data.founder.name}">
+                        `;
+                    } else {
+                        avatarContainer.innerHTML = `
+                            <div class="founder-scan-line"></div>
+                            <div class="founder-logo-svg">
+                                <svg width="290" height="134" viewBox="0 0 290 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M78 133.4H6.63574C9.83939 113.664 14.7877 93.3585 22.3438 74.8135C40.3778 66.2522 60.1431 56.5565 78 47.1006V133.4ZM78 10.5732C51.3902 22.4262 33.8474 46.5798 22.3438 74.8135C14.4642 78.5541 6.91535 82.0786 0 85.2705V0.400391H78V10.5732Z" fill="white"/>
+                                </svg>
+                            </div>
+                        `;
+                    }
+                }
+
+                const statsContainer = document.querySelector('.founder-stats');
+                if (statsContainer && data.founder.stats) {
+                    statsContainer.innerHTML = '';
+                    data.founder.stats.forEach(stat => {
+                        const div = document.createElement('div');
+                        div.className = 'stat-item';
+                        div.innerHTML = `<span class="stat-val">${stat.value}</span><span class="stat-lbl">${stat.label}</span>`;
+                        statsContainer.appendChild(div);
+                    });
+                }
+            }
+
+            // Team
+            if (data.team && data.team.length > 0) {
+                const teamGrid = document.querySelector('.team-grid');
+                if (teamGrid) {
+                    teamGrid.innerHTML = '';
+                    data.team.forEach(member => {
+                        const card = document.createElement('div');
+                        card.className = 'team-card reveal active';
+
+                        let avatarHTML = member.image
+                            ? `<img src="${member.image}" class="team-avatar-img" alt="${member.name}">`
+                            : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+                        let socials = '';
+                        if (member.github) socials += `<a href="${member.github}" class="team-social-link" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>`;
+                        if (member.telegram) socials += `<a href="${member.telegram}" class="team-social-link" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></a>`;
+
+                        card.innerHTML = `
+                            <div class="team-avatar-container">${avatarHTML}</div>
+                            <h3 class="team-name">${member.name}</h3>
+                            <span class="team-role">${member.role}</span>
+                            <p class="team-desc">${member.description}</p>
+                            <div class="team-socials">${socials}</div>
+                        `;
+                        teamGrid.appendChild(card);
+                    });
+                }
+            }
+
+            // Footer
+            if (data.footer) {
+                const footerTitle = document.querySelector('.footer-cta-title');
+                if (footerTitle) footerTitle.innerHTML = `${data.footer.cta_title_start}<br><span>${data.footer.cta_title_highlight}</span>`;
+                const footerDesc = document.querySelector('.footer-cta-desc');
+                if (footerDesc) footerDesc.textContent = data.footer.cta_description;
+                const footerCopy = document.querySelector('.footer-copy');
+                if (footerCopy) footerCopy.innerHTML = `&copy; 2026 ${data.footer.copyright}`;
+
+                const footerSocials = document.querySelector('.footer-bottom .footer-socials');
+                if (footerSocials) {
+                    footerSocials.innerHTML = `<a href="mailto:${data.footer.contact_email}" class="footer-social-link">${data.footer.contact_email}</a>`;
+                    if (data.footer.socials) {
+                        data.footer.socials.forEach(soc => {
+                            const a = document.createElement('a');
+                            a.href = soc.url;
+                            a.target = "_blank";
+                            a.rel = "noopener";
+                            a.className = 'footer-social-link';
+                            a.textContent = soc.name;
+                            footerSocials.appendChild(a);
+                        });
+                    }
+                }
+            }
+        }
+
+        /* --- PRELOADER --- */
+        function initPreloader() {
+            const preloader = document.querySelector('.preloader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    if (preloader) preloader.classList.add('loaded');
+                    document.body.style.overflowY = 'auto';
+                    triggerFirstReveal();
+                }, 1000);
+            });
+            setTimeout(() => {
+                if (preloader && !preloader.classList.contains('loaded')) {
+                    preloader.classList.add('loaded');
+                    document.body.style.overflowY = 'auto';
+                    triggerFirstReveal();
+                }
+            }, 2500);
+        }
+
+        function triggerFirstReveal() {
+            document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('active'));
+        }
+
+        /* --- THEME SWITCHER --- */
+        function initThemeSwitcher() {
+            const themeBtns = document.querySelectorAll('.theme-btn');
+            const root = document.documentElement;
+            const savedTheme = localStorage.getItem('what-theme') || 'black';
+            setTheme(savedTheme);
+
+            themeBtns.forEach(btn => {
+                const theme = btn.getAttribute('data-theme-name');
+                if (theme === savedTheme) btn.classList.add('active');
+                else btn.classList.remove('active');
+
+                btn.addEventListener('click', () => {
+                    themeBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    setTheme(theme);
+                });
+            });
+
+            function setTheme(themeName) {
+                if (themeName === 'black') root.removeAttribute('data-theme');
+                else root.setAttribute('data-theme', themeName);
+                localStorage.setItem('what-theme', themeName);
+                window.dispatchEvent(new CustomEvent('themeChanged', {detail: themeName}));
+            }
+        }
+
+        /* --- CUSTOM CURSOR --- */
+        function initCustomCursor() {
+            const cursor = document.querySelector('.custom-cursor');
+            const outline = document.querySelector('.custom-cursor-outline');
+            if (!cursor || !outline) return;
+
+            if (!window.matchMedia('(pointer: fine)').matches) {
+                document.body.classList.remove('has-mouse');
+                return;
+            }
+
+            let mouseX = -100, mouseY = -100, cursorX = -100, cursorY = -100, outlineX = -100, outlineY = -100;
+
+            window.addEventListener('mousemove', (e) => {
+                if (!document.body.classList.contains('has-mouse')) document.body.classList.add('has-mouse');
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.35;
+                cursorY += (mouseY - cursorY) * 0.35;
+                cursor.style.left = `${cursorX}px`;
+                cursor.style.top = `${cursorY}px`;
+
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+                outline.style.left = `${outlineX}px`;
+                outline.style.top = `${outlineY}px`;
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            document.addEventListener('mouseover', (e) => {
+                const interactive = e.target.closest('a, button, .theme-btn, .project-card, .mini-card, input, textarea, .project-modal-close');
+                if (interactive) document.body.classList.add('cursor-hover');
+                else document.body.classList.remove('cursor-hover');
+            });
+        }
+
+        /* --- MOUSE SPOTLIGHT --- */
+        function initMouseSpotlight() {
+            const root = document.documentElement;
+            const ambientGlow = document.querySelector('.mouse-glow');
+
+            window.addEventListener('mousemove', (e) => {
+                root.style.setProperty('--mouse-x', `${e.clientX}px`);
+                root.style.setProperty('--mouse-y', `${e.clientY}px`);
+                if (ambientGlow) {
+                    ambientGlow.style.left = `${e.clientX}px`;
+                    ambientGlow.style.top = `${e.clientY}px`;
+                }
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                const card = e.target.closest('.project-card');
+                if (card) {
+                    const rect = card.getBoundingClientRect();
+                    card.style.setProperty('--card-mouse-x', `${e.clientX - rect.left}px`);
+                    card.style.setProperty('--card-mouse-y', `${e.clientY - rect.top}px`);
+                }
+            });
+        }
+
+        /* --- SCROLL REVEAL --- */
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {threshold: 0.1});
+
+            reveals.forEach(el => observer.observe(el));
+
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const pos = window.scrollY + 200;
+                sections.forEach(sec => {
+                    if (pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight) current = sec.getAttribute('id');
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+                });
+            });
+        }
+
+        /* --- NAVBAR SCROLL --- */
+        function initNavbarScroll() {
+            const navbar = document.querySelector('.navbar');
+            const check = () => {
+                if (window.scrollY > 60) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            };
+            window.addEventListener('scroll', check);
+            check();
+        }
+
+        /* --- PROJECT FILTERS --- */
+        function initProjectFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        const cat = card.getAttribute('data-category');
+                        if (filter === 'all' || cat === filter) {
+                            card.classList.remove('hidden');
+                            card.style.opacity = '1';
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        }
+
+        /* --- CANVAS PARTICLES --- */
+        function initFounderCanvas() {
+            const container = document.querySelector('.founder-visual');
+            const canvas = document.getElementById('founder-canvas');
+            if (!canvas || !container) return;
+
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = container.offsetWidth;
+            let height = canvas.height = container.offsetHeight;
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = container.offsetWidth;
+                height = canvas.height = container.offsetHeight;
+            });
+
+            const particles = [];
+            const count = 30;
+            let color = 'rgb(255, 255, 255)';
+
+            for (let i = 0; i < count; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    r: Math.random() * 2 + 1
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > width) p.vx *= -1;
+                    if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = color;
+                    ctx.fill();
+
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x, dy = p.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 80) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${0.15 - dist / 80 * 0.15})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        /* --- 3D TILT --- */
+        function initFounderTilt() {
+            const card = document.querySelector('.founder-visual');
+            if (!card || !window.matchMedia('(pointer: fine)').matches) return;
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+                const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+                card.style.transform = `perspective(1000px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg) scale3d(1.01, 1.01, 1.01)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
+        }
+
+        /* --- CONTACT FORM --- */
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            const statusMsg = document.getElementById('form-status');
+            if (!form || !statusMsg) return;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = form.querySelector('.form-submit');
+                const origText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = 'Отправка...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    statusMsg.textContent = 'Спасибо! Ваше сообщение принято.';
+                    statusMsg.className = 'form-status success';
+                    form.reset();
+                    submitBtn.innerHTML = origText;
+                    submitBtn.disabled = false;
+                    setTimeout(() => statusMsg.className = 'form-status', 4000);
+                }, 800);
+            });
+        }
+
+        /* --- PROJECT MODAL --- */
+        function initProjectModalEvents() {
+            const modal = document.getElementById('project-modal');
+            const backdrop = document.getElementById('project-modal-backdrop');
+            const closeBtn = document.getElementById('project-modal-close');
+            if (!modal) return;
+
+            document.addEventListener('click', (e) => {
+                const card = e.target.closest('.project-card');
+                if (card) {
+                    e.preventDefault();
+                    const projectId = card.getAttribute('data-id');
+                    if (projectId) openProjectModal(projectId);
+                }
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+            });
+        }
+
+        function openProjectModal(projectId) {
+            const project = currentProjectsData.find(p => p.id === projectId);
+            if (!project) return;
+
+            const modal = document.getElementById('project-modal');
+            const body = document.getElementById('project-modal-body');
+
+            const techTags = (project.tech || []).map(t => `<span class="modal-tech-tag">${t}</span>`).join('');
+            let screenshotsHTML = '';
+            if (project.screenshots && project.screenshots.length > 0) {
+                const imgs = project.screenshots.map(s => `<img src="${s}" class="modal-screenshot-img" alt="${project.title}">`).join('');
+                screenshotsHTML = `<div class="modal-screenshots-container"><h4 class="modal-screenshots-title">Галерея проекта</h4><div class="modal-screenshots">${imgs}</div></div>`;
+            }
+
+            let actionsHTML = '';
+            if (project.github_url) actionsHTML += `<a href="${project.github_url}" target="_blank" rel="noopener" class="btn btn-primary">Исходный код (GitHub)</a>`;
+            if (project.download_url) actionsHTML += `<a href="${project.download_url}" target="_blank" rel="noopener" class="btn btn-outline">Скачать релиз</a>`;
+
+            body.innerHTML = `
+                <div class="modal-header-block">
+                    <span class="modal-cat">${project.category_label || ''}</span>
+                    <h3 class="modal-title">${project.title}</h3>
+                </div>
+                <div class="modal-grid">
+                    <div>
+                        <p class="modal-desc">${project.long_description || project.description}</p>
+                        <div class="modal-tech-box">
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Технологический стек</h4>
+                            <div class="modal-tech-list">${techTags}</div>
+                        </div>
+                        ${screenshotsHTML}
+                        <div class="modal-actions">${actionsHTML}</div>
+                    </div>
+                </div>
+            `;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        /* --- MOBILE NAV --- */
+        function initMobileNav() {
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('open');
+                    mobileToggle.classList.toggle('active');
+                });
+                navMenu.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('open');
+                        mobileToggle.classList.remove('active');
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

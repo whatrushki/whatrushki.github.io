@@ -1,0 +1,184 @@
+{
+    "hero": {
+        "slogan_start": "Don't ask WHAT",
+        "slogan_highlight": "Be the WHAT.",
+        "description": "Независимая технологическая лаборатория. Проектируем высокопроизводительные системы, разрабатываем масштабируемую инфраструктуру и создаем иммерсивные веб-интерфейсы нового поколения."
+    },
+    "about": {
+        "title": "Инженерия и эстетика",
+        "subtitle": "Мы объединяем строгую системную архитектуру и передовой визуальный дизайн.",
+        "description_huge": "Команда разработчиков, инженеров и дизайнеров, создающая программные продукты на стыке технологий и визуальной культуры. <strong>WHAT Technologies</strong> фокусируется на производительности, надежности и внимании к каждой детали взаимодействия.",
+        "cards": [
+            {
+                "num": "01 / ARCHITECTURE",
+                "title": "Системная разработка",
+                "desc": "Проектирование масштабируемых и отказоустойчивых сервисов на Rust, Go и TypeScript."
+            },
+            {
+                "num": "02 / INTERFACES",
+                "title": "Иммерсивный Web",
+                "desc": "Создание уникального интерактивного опыта с использованием WebGL, WebGPU и микроанимаций."
+            },
+            {
+                "num": "03 / INFRASTRUCTURE",
+                "title": "DevOps и безопасность",
+                "desc": "Развертывание Zero-Trust сетей, CI/CD пайплайнов и распределенной облачной инфраструктуры."
+            }
+        ]
+    },
+    "projects": [
+        {
+            "id": "proj-1",
+            "category": "interfaces",
+            "category_label": "Интерфейсы",
+            "title": "W.H.A.T. OS",
+            "description": "Интерактивная веб-среда рабочего стола с оконным менеджером, виртуальным терминалом и аппаратным ускорением.",
+            "tech": [
+                "JavaScript",
+                "WebGL",
+                "WebAudio API"
+            ],
+            "long_description": "Экспериментальная веб-операционная система, работающая изолированно в браузере. Включает многооконный оконный менеджер, терминал с базовыми unix-командами, файловую систему в памяти и шейдерные фильтры постобработки.",
+            "screenshots": [
+                "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
+            ],
+            "github_url": "https://github.com/",
+            "download_url": ""
+        },
+        {
+            "id": "proj-2",
+            "category": "infra",
+            "category_label": "Инфраструктура",
+            "title": "Aura Core",
+            "description": "Высокопроизводительный движок динамической стилизации интерфейсов с компиляцией в WebAssembly.",
+            "tech": [
+                "Rust",
+                "WebAssembly",
+                "CSS Engines"
+            ],
+            "long_description": "Aura Core оптимизирует работу с динамическими стилями в нагруженных интерфейсах. Написан на Rust, компилируется в WASM и гарантирует 120 FPS даже при сотнях одновременно анимируемых параметров.",
+            "screenshots": [
+                "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop"
+            ],
+            "github_url": "https://github.com/",
+            "download_url": ""
+        },
+        {
+            "id": "proj-3",
+            "category": "labs",
+            "category_label": "Лаборатория",
+            "title": "Nebula Engine",
+            "description": "Генеративный рендерер частиц на базе WebGPU с физической симуляцией на стороне видеокарты.",
+            "tech": [
+                "WebGPU",
+                "WGSL",
+                "Compute Shaders"
+            ],
+            "long_description": "Графическая библиотека для браузеров следующего поколения. Позволяет симулировать до 1,000,000 частиц в реальном времени с поддержкой интерактивного гравитационного поля курсора.",
+            "screenshots": [
+                "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=600&auto=format&fit=crop"
+            ],
+            "github_url": "https://github.com/",
+            "download_url": ""
+        },
+        {
+            "id": "proj-4",
+            "category": "infra",
+            "category_label": "Инфраструктура",
+            "title": "Synapse Protocol",
+            "description": "Низкозадержечный сетевой протокол обмена сообщениями в реальном времени поверх QUIC.",
+            "tech": [
+                "Go",
+                "Protobuf",
+                "QUIC"
+            ],
+            "long_description": "Легковесный сетевой протокол с автоматическим мультиплексированием и шифрованием, разработанный для приложений реального времени и нестабильных мобильных сетей.",
+            "screenshots": [],
+            "github_url": "https://github.com/",
+            "download_url": ""
+        }
+    ],
+    "founder": {
+        "name": "W.H.A.T. Architect",
+        "role": "Основатель & Lead Architect",
+        "image": "",
+        "bio": "Привет. Я основатель <strong>WHAT Technologies</strong>. Наш фокус — создание продуктов, где высокая техническая надежность гармонично сочетается с продуманным дизайном и вниманием к деталям.\n\nМы разрабатываем решения на базе открытого исходного кода, экспериментируем с передовыми стандартами веба и проектируем системы, рассчитанные на долгий срок службы.",
+        "stats": [
+            {
+                "value": "10",
+                "label": "Лет в разработке"
+            },
+            {
+                "value": "50M",
+                "label": "Обработанных событий"
+            },
+            {
+                "value": "15",
+                "label": "Open-Source релизов"
+            }
+        ]
+    },
+    "team": [
+        {
+            "id": "member-1",
+            "name": "Alex Mercer",
+            "role": "Systems Engineer",
+            "image": "",
+            "description": "Специалист по распределенным протоколам и низкоуровневой разработке на Rust и Go.",
+            "github": "https://github.com",
+            "twitter": "",
+            "linkedin": "",
+            "telegram": "https://t.me",
+            "instagram": "",
+            "vk": ""
+        },
+        {
+            "id": "member-2",
+            "name": "Elena Vance",
+            "role": "Design Director",
+            "image": "",
+            "description": "Проектирует UI/UX дизайн-системы, визуальный брендинг и интерактивную WebGL-графику.",
+            "github": "",
+            "twitter": "",
+            "linkedin": "",
+            "telegram": "https://t.me",
+            "instagram": "",
+            "vk": ""
+        },
+        {
+            "id": "member-3",
+            "name": "Marcus Brody",
+            "role": "DevOps & Security",
+            "image": "",
+            "description": "Отвечает за инфраструктуру, Kubernetes-кластеры, автоматизацию деплоя и сетевую безопасность.",
+            "github": "https://github.com",
+            "twitter": "",
+            "linkedin": "",
+            "telegram": "https://t.me",
+            "instagram": "",
+            "vk": ""
+        }
+    ],
+    "footer": {
+        "cta_title_start": "Давайте создадим",
+        "cta_title_highlight": "что-то стоящее.",
+        "cta_description": "Готовы обсудить ваш проект, архитектуру решения или совместную работу? Напишите нам на почту.",
+        "contact_email": "hello@what.tech",
+        "copyright": "WHAT Technologies. Все права защищены.",
+        "socials": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Telegram",
+                "url": "https://t.me"
+            },
+            {
+                "name": "Twitter / X",
+                "url": "https://twitter.com"
+            }
+        ]
+    }
+}
