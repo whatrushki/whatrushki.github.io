@@ -8,25 +8,25 @@
 
     <!-- SEO & Metadata -->
     <meta name="description"
-        content="WHAT Technologies — сообщество инженеров и разработчиков. Кроссплатформенные приложения (Compose Multiplatform), веб-разработка, боты и системная инфраструктура.">
+        content="WHAT Technologies — открытое комьюнити разработчиков и дизайнеров. Создаем мобильные приложения, веб-сервисы и креативные проекты.">
     <meta name="keywords"
         content="Kotlin, Compose Multiplatform, Android, React, Python, Docker, Linux, WHAT technologies, Гор Оганнисян">
     <meta name="author" content="WHAT Technologies">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://whatrushki.github.io">
 
-    <!-- Open Graph / Facebook / Telegram -->
+    <!-- Open Graph / Telegram / VK -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://whatrushki.github.io">
     <meta property="og:title" content="WHAT Technologies — Don't ask WHAT. Be the WHAT.">
     <meta property="og:description"
-        content="Кроссплатформенные приложения, нативные Android-сервисы, веб-интерфейсы и боты.">
+        content="Комьюнити разработчиков. Реализуем классные идеи: от мобилок на Compose до веб-сервисов и ботов.">
     <meta property="og:image" content="logo.svg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WHAT Technologies">
-    <meta name="twitter:description" content="Разработка кроссплатформенных продуктов и инфраструктуры.">
+    <meta name="twitter:description" content="Разработка кроссплатформенных продуктов и креативных идей.">
     <meta name="twitter:image" content="logo.svg">
 
     <!-- Schema.org JSON-LD -->
@@ -37,7 +37,7 @@
       "name": "WHAT Technologies",
       "url": "https://whatrushki.github.io",
       "logo": "logo.svg",
-      "description": "Сообщество инженеров и разработчиков. Мобильные приложения на Compose Multiplatform, веб-сервисы и автоматизация.",
+      "description": "Комьюнити разработчиков и дизайнеров.",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "gorogannisan641@gmail.com",
@@ -48,6 +48,59 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Inline Fixes for Tags Wrapping & Horizontal Team Scroll -->
+    <style>
+        /* Перенос тегов на новую строку */
+        .project-tech,
+        .modal-tech-list {
+            display: flex;
+            flex-wrap: wrap !important;
+            gap: 0.5rem 0.85rem !important;
+        }
+
+        /* Горизонтальный скролл команды на всех устройствах */
+        .team-grid {
+            display: flex !important;
+            grid-template-columns: none !important;
+            overflow-x: auto !important;
+            gap: 1.5rem !important;
+            padding-bottom: 1.25rem !important;
+            scroll-snap-type: x mandatory !important;
+            -webkit-overflow-scrolling: touch !important;
+        }
+
+        .team-grid::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .team-grid::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 4px;
+        }
+
+        .team-grid::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .team-grid::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        .team-card {
+            flex: 0 0 310px !important;
+            min-width: 310px !important;
+            scroll-snap-align: start !important;
+        }
+
+        @media (max-width: 768px) {
+            .team-card {
+                flex: 0 0 270px !important;
+                min-width: 270px !important;
+            }
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -299,17 +352,15 @@
     <!-- ABOUT SECTION -->
     <section class="section" id="about">
         <div class="section-header reveal">
-            <span class="mono-label">О синдикате</span>
-            <h2 class="section-title">Инженерия и практика</h2>
-            <p class="section-subtitle">Мы создаем продукты полного цикла — от идеи и архитектуры до дизайна и релиза.
-            </p>
+            <span class="mono-label">О комьюнити</span>
+            <h2 class="section-title">Идеи и реализация</h2>
+            <p class="section-subtitle">Создаем цифровые продукты полного цикла — от идеи и архитектуры до релиза.</p>
         </div>
 
         <div class="about-grid">
             <div class="about-text-huge reveal">
-                <p>Команда разработчиков, решающая реальные задачи через современный стек. <strong>WHAT
-                        Technologies</strong> объединяет опыт побед во всероссийских хакатонах, коммерческую разработку
-                    и создание решений, которыми ежедневно пользуются тысячи людей.</p>
+                <p>Мы — открытое сообщество разработчиков и дизайнеров. Собираем креативных людей вокруг классных идей и
+                    вместе превращаем их в живые проекты — от мобильных приложений до нестандартного веба и ботов.</p>
             </div>
 
             <div class="about-cards reveal">
@@ -346,11 +397,9 @@
             <p class="section-subtitle">Стек технологий в действии — от прототипа до продакшн-систем.</p>
         </div>
 
+        <!-- Dynamic Category Filter Bar -->
         <div class="projects-filter-bar reveal">
             <button class="filter-btn active" data-filter="all">Все проекты</button>
-            <button class="filter-btn" data-filter="interfaces">Интерфейсы</button>
-            <button class="filter-btn" data-filter="infra">Инфраструктура</button>
-            <button class="filter-btn" data-filter="labs">Лаборатория</button>
         </div>
 
         <div class="projects-grid reveal">
@@ -362,9 +411,9 @@
     <!-- FOUNDER SECTION -->
     <section class="section" id="founder">
         <div class="section-header reveal">
-            <span class="mono-label">Основатель</span>
-            <h2 class="section-title">Создатель бренда</h2>
-            <p class="section-subtitle">Философия проектирования, ориентированная на безупречное качество.</p>
+            <span class="mono-label">Создатель</span>
+            <h2 class="section-title">Основатель</h2>
+            <p class="section-subtitle">Любовь к чистому коду, нативным интерфейсам и хакатонам.</p>
         </div>
 
         <div class="founder-grid">
@@ -378,12 +427,12 @@
                 <span class="founder-title">FOUNDER & LEAD DEVELOPER</span>
 
                 <div class="founder-bio">
-                    <p>Привет! Я основатель <strong>WHAT Technologies</strong>. Студент 3-го курса РКСИ, Fullstack &
-                        Mobile-разработчик с 4 годами опыта в IT и победами в более чем 7 всероссийских и региональных
-                        хакатонах. Финалист чемпионата «Профессионалы».</p>
-                    <p>Специализируюсь на Kotlin (Android, Compose Multiplatform, Ktor), Python и веб-разработке.
-                        Совмещаю системный инженерный подход с креативным мышлением: от архитектуры и мобильных CRM до
-                        дизайна и общественной деятельности.</p>
+                    <p>Привет! Я Гор — учусь на 3-м курсе РКСИ, пишу код и развиваю <strong>WHAT</strong>. Люблю
+                        создавать полезные штуки, которыми пользуются студенты и друзья (например, приложение расписания
+                        WHAT Schedule).</p>
+                    <p>В основном пишу на Kotlin под Android (Jetpack Compose, Compose Multiplatform), работаю с
+                        бэкендом на Python и вебом. Часто участвую в хакатонах, ценю аккуратную архитектуру, отзывчивый
+                        UI и командный драйв.</p>
                 </div>
 
                 <div class="founder-stats">
@@ -393,11 +442,11 @@
                     </div>
                     <div class="stat-item">
                         <span class="stat-val">7+</span>
-                        <span class="stat-lbl">Побед в хакатонах</span>
+                        <span class="stat-lbl">Побед на хакатонах</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-val">100%</span>
-                        <span class="stat-lbl">Практический стек</span>
+                        <span class="stat-lbl">Свои проекты</span>
                     </div>
                 </div>
             </div>
@@ -408,11 +457,12 @@
     <!-- TEAM SECTION -->
     <section class="section" id="team">
         <div class="section-header reveal">
-            <span class="mono-label">Синдикат</span>
+            <span class="mono-label">Участники</span>
             <h2 class="section-title">Команда</h2>
-            <p class="section-subtitle">Инженеры и разработчики, создающие надежные цифровые решения.</p>
+            <p class="section-subtitle">Инженеры и разработчики комьюнити.</p>
         </div>
 
+        <!-- Horizontal Scrolling List on Mobile & Desktop -->
         <div class="team-grid reveal">
             <!-- Dynamic team members rendered via JS -->
         </div>
@@ -425,7 +475,7 @@
             <div class="footer-cta reveal">
                 <h2 class="footer-cta-title">Есть идея?<br><span>Давай реализуем.</span></h2>
                 <p class="footer-cta-desc">Хочешь обсудить проект, предложить сотрудничество или присоединиться к нам?
-                    Напиши напрямую основателю.</p>
+                    Напиши напрямую основателю в Telegram.</p>
             </div>
 
             <div class="footer-form-container reveal">
@@ -435,16 +485,16 @@
                         <input type="text" id="name" name="name" class="form-input" placeholder="Александр" required>
                     </div>
                     <div class="form-group">
-                        <label for="email" class="form-label">Email для связи</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="alex@example.com"
-                            required>
+                        <label for="email" class="form-label">Email или контакт для связи (опционально)</label>
+                        <input type="text" id="email" name="email" class="form-input"
+                            placeholder="@telegram_nick или alex@example.com">
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">Сообщение или задача</label>
                         <textarea id="message" name="message" class="form-input" rows="4"
-                            placeholder="Опишите ваш проект или вопрос..." required></textarea>
+                            placeholder="Опишите вашу идею или вопрос..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary form-submit">Отправить сообщение</button>
+                    <button type="submit" class="btn btn-primary form-submit">Написать в Telegram →</button>
                     <div class="form-status" id="form-status"></div>
                 </form>
             </div>
@@ -479,7 +529,7 @@
     <script>
         let currentProjectsData = [];
 
-        // Полные актуальные данные по умолчанию (работает даже если открыто напрямую через file://)
+        // Полные актуальные данные по умолчанию
         const DEFAULT_SITE_DATA = {
             "hero": {
                 "slogan_start": "Don't ask WHAT.",
@@ -487,9 +537,9 @@
                 "description": "Сообщество инженеров и креативных разработчиков. Беремся за сильные идеи и превращаем их в работающие продукты: от кроссплатформенных мобильных приложений на Compose до чистого веба и инфраструктуры."
             },
             "about": {
-                "title": "Инженерия и практика",
-                "subtitle": "Мы создаем продукты полного цикла — от идеи и архитектуры до дизайна и релиза.",
-                "description_huge": "Команда разработчиков, решающая реальные задачи через современный стек. <strong>WHAT Technologies</strong> объединяет опыт побед во всероссийских хакатонах, коммерческую разработку и создание решений, которыми ежедневно пользуются тысячи людей.",
+                "title": "Идеи и реализация",
+                "subtitle": "Создаем цифровые продукты полного цикла — от идеи и архитектуры до релиза.",
+                "description_huge": "Мы — открытое сообщество разработчиков и дизайнеров. Собираем креативных людей вокруг классных идей и вместе превращаем их в живые проекты — от мобильных приложений до нестандартного веба и ботов.",
                 "cards": [
                     {
                         "num": "01 / MULTIPLATFORM",
@@ -511,8 +561,8 @@
             "projects": [
                 {
                     "id": "proj-1",
-                    "category": "interfaces",
-                    "category_label": "Mobile / Android",
+                    "category": "mobile",
+                    "category_label": "Мобильные приложения",
                     "title": "WHAT Schedule",
                     "description": "Умное мобильное приложение расписания для студентов РКСИ и ведущих вузов юга России. Автономная работа, виджеты и интеграция с учебными планами.",
                     "tech": ["Kotlin", "Jetpack Compose", "Koin", "Ktor", "Room", "Glance Widgets"],
@@ -523,7 +573,7 @@
                 },
                 {
                     "id": "proj-2",
-                    "category": "interfaces",
+                    "category": "web",
                     "category_label": "Веб-разработка",
                     "title": "Urartu Ensemble Web",
                     "description": "Официальный промо-сайт и медиа-платформа ансамбля армянских народных и этнических танцев «Урарту».",
@@ -535,8 +585,8 @@
                 },
                 {
                     "id": "proj-3",
-                    "category": "labs",
-                    "category_label": "CMP & RSocket",
+                    "category": "mobile",
+                    "category_label": "Мобильные приложения",
                     "title": "IT-School Mobile Platform",
                     "description": "Кроссплатформенное приложение для онлайн IT-школы на базе CRM с интерактивными тестами и RSocket-чатом.",
                     "tech": ["Compose Multiplatform", "RSocket", "SQLDelight", "Koin", "Ktor"],
@@ -547,8 +597,8 @@
                 },
                 {
                     "id": "proj-4",
-                    "category": "infra",
-                    "category_label": "Python & Bot Infra",
+                    "category": "backend",
+                    "category_label": "Бэкенд и боты",
                     "title": "WHAT Bot & Automation Engine",
                     "description": "Модульная инфраструктура ботов и асинхронных парсеров для автоматизации сбора данных и CRM-систем.",
                     "tech": ["Python", "FastAPI", "Disnake", "SQLAlchemy", "Docker"],
@@ -562,11 +612,11 @@
                 "name": "Гор Оганнисян (whatrushik)",
                 "role": "FOUNDER & LEAD DEVELOPER",
                 "image": "assets/gor.jpg",
-                "bio": "Привет! Я основатель <strong>WHAT Technologies</strong>. Студент 3-го курса РКСИ, Fullstack & Mobile-разработчик с 4 годами опыта в IT и победами в более чем 7 всероссийских и региональных хакатонах. Финалист чемпионата «Профессионалы».\n\nСпециализируюсь на Kotlin (Android, Compose Multiplatform, Ktor), Python и веб-разработке. Совмещаю системный инженерный подход с креативным мышлением: от архитектуры и мобильных CRM до дизайна и общественной деятельности.",
+                "bio": "Привет! Я Гор — учусь на 3-м курсе РКСИ, пишу код и развиваю <strong>WHAT</strong>. Люблю создавать полезные штуки, которыми пользуются студенты и друзья (например, приложение расписания WHAT Schedule).\n\nВ основном пишу на Kotlin под Android (Jetpack Compose, Compose Multiplatform), работаю с бэкендом на Python и вебом. Часто участвую в хакатонах, ценю аккуратную архитектуру, отзывчивый UI и командный драйв.",
                 "stats": [
                     { "value": "4+", "label": "Года в коде" },
-                    { "value": "7+", "label": "Побед в хакатонах" },
-                    { "value": "100%", "label": "Практический стек" }
+                    { "value": "7+", "label": "Побед на хакатонах" },
+                    { "value": "100%", "label": "Свои проекты" }
                 ]
             },
             "team": [
@@ -575,7 +625,7 @@
                     "name": "Егор (EgorVorOK)",
                     "role": "Core Developer & Community",
                     "image": "",
-                    "description": "Душа команды и разработчик ядра. Отвечает за логику сервисов, командную координацию и реализацию ключевых фичей проектов.",
+                    "description": "Разработчик ядра и активный участник проектов. Отвечает за логику сервисов, реализацию фичей и командную координацию.",
                     "github": "https://github.com/EgorVorOK",
                     "telegram": "https://t.me/egorvorok"
                 },
@@ -592,7 +642,7 @@
             "footer": {
                 "cta_title_start": "Есть идея?",
                 "cta_title_highlight": "Давай реализуем.",
-                "cta_description": "Хочешь обсудить проект, предложить сотрудничество или присоединиться к нам? Напиши напрямую основателю.",
+                "cta_description": "Хочешь обсудить проект, предложить сотрудничество или присоединиться к нам? Напиши напрямую основателю в Telegram.",
                 "contact_email": "gorogannisan641@gmail.com",
                 "copyright": "WHAT Technologies. Все права защищены.",
                 "socials": [
@@ -606,20 +656,18 @@
         document.addEventListener('DOMContentLoaded', () => {
             initPreloader();
 
-            // Пытаемся загрузить data.json с обходом кэша браузера
             fetch('data.json?v=' + Date.now())
                 .then(res => {
                     if (!res.ok) throw new Error('Network response error: ' + res.status);
                     return res.json();
                 })
                 .then(data => {
-                    console.log("Данные успешно загружены из data.json!");
                     currentProjectsData = data.projects || [];
                     renderContent(data);
                     initializeInteractions();
                 })
                 .catch(err => {
-                    console.info("Загрузка data.json через fetch недоступна (локальный file:// режим). Используем встроенный fallback.", err);
+                    console.info("Используем встроенный fallback:", err);
                     currentProjectsData = DEFAULT_SITE_DATA.projects;
                     renderContent(DEFAULT_SITE_DATA);
                     initializeInteractions();
@@ -631,7 +679,6 @@
             initCustomCursor();
             initMouseSpotlight();
             initScrollReveal();
-            initProjectFilters();
             initFounderCanvas();
             initFounderTilt();
             initContactForm();
@@ -673,36 +720,9 @@
                 }
             }
 
-            // Projects
+            // Projects & Dynamic Filters
             if (data.projects && data.projects.length > 0) {
-                const projectsGrid = document.querySelector('.projects-grid');
-                if (projectsGrid) {
-                    projectsGrid.innerHTML = '';
-                    data.projects.forEach(project => {
-                        const card = document.createElement('a');
-                        card.className = 'project-card reveal active';
-                        card.href = '#';
-                        card.setAttribute('data-category', project.category);
-                        card.setAttribute('data-id', project.id);
-
-                        const techSpans = (project.tech || []).map(t => `<span class="project-tech-item">${t}</span>`).join('');
-
-                        card.innerHTML = `
-                            <div class="project-top">
-                                <span class="project-cat">${project.category_label || ''}</span>
-                                <div class="project-arrow">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6464L9.79289 4.5H5C4.72386 4.5 4.5 4.27614 4.5 4C4.5 3.72386 4.72386 3.5 5 3.5H11C11.2761 3.5 11.5 3.72386 11.5 4V10C11.5 10.2761 11.2761 10.5 11 10.5C10.7239 10.5 10.5 10.2761 10.5 10V5.20711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </div>
-                            </div>
-                            <div class="project-middle">
-                                <h3 class="project-title">${project.title}</h3>
-                                <p class="project-desc">${project.description}</p>
-                            </div>
-                            <div class="project-tech">${techSpans}</div>
-                        `;
-                        projectsGrid.appendChild(card);
-                    });
-                }
+                renderProjectsSection(data.projects);
             }
 
             // Founder
@@ -754,7 +774,7 @@
                 }
             }
 
-            // Team
+            // Team (Horizontal list)
             if (data.team && data.team.length > 0) {
                 const teamGrid = document.querySelector('.team-grid');
                 if (teamGrid) {
@@ -808,6 +828,101 @@
                     }
                 }
             }
+        }
+
+        /* --- DYNAMIC PROJECTS & FILTER CREATOR --- */
+        function renderProjectsSection(projects) {
+            const projectsGrid = document.querySelector('.projects-grid');
+            const filterBar = document.querySelector('.projects-filter-bar');
+            if (!projectsGrid || !filterBar) return;
+
+            // 1. Создаем уникальные категории динамически
+            const categoryMap = new Map();
+            projects.forEach(p => {
+                if (p.category && !categoryMap.has(p.category)) {
+                    categoryMap.set(p.category, p.category_label || p.category);
+                }
+            });
+
+            filterBar.innerHTML = `<button class="filter-btn active" data-filter="all">Все проекты</button>`;
+            categoryMap.forEach((label, catKey) => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.setAttribute('data-filter', catKey);
+                btn.textContent = label;
+                filterBar.appendChild(btn);
+            });
+
+            // 2. Рендерим сами карточки проектов
+            projectsGrid.innerHTML = '';
+            projects.forEach(project => {
+                const card = document.createElement('a');
+                card.className = 'project-card reveal active';
+                card.href = '#';
+                card.setAttribute('data-category', project.category);
+                card.setAttribute('data-id', project.id);
+
+                const techSpans = (project.tech || []).map(t => `<span class="project-tech-item">${t}</span>`).join('');
+
+                card.innerHTML = `
+                    <div class="project-top">
+                        <span class="project-cat">${project.category_label || ''}</span>
+                        <div class="project-arrow">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6464L9.79289 4.5H5C4.72386 4.5 4.5 4.27614 4.5 4C4.5 3.72386 4.72386 3.5 5 3.5H11C11.2761 3.5 11.5 3.72386 11.5 4V10C11.5 10.2761 11.2761 10.5 11 10.5C10.7239 10.5 10.5 10.2761 10.5 10V5.20711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </div>
+                    </div>
+                    <div class="project-middle">
+                        <h3 class="project-title">${project.title}</h3>
+                        <p class="project-desc">${project.description}</p>
+                    </div>
+                    <div class="project-tech">${techSpans}</div>
+                `;
+                projectsGrid.appendChild(card);
+            });
+
+            // 3. Подключаем слушатели на фильтры
+            initProjectFilters();
+        }
+
+        function initProjectFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.onclick = () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        const cat = card.getAttribute('data-category');
+                        if (filter === 'all' || cat === filter) {
+                            card.classList.remove('hidden');
+                            card.style.opacity = '1';
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                };
+            });
+        }
+
+        /* --- CONTACT FORM -> TELEGRAM REDIRECT --- */
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            if (!form) return;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = form.querySelector('#name').value.trim();
+                const email = form.querySelector('#email').value.trim();
+                const message = form.querySelector('#message').value.trim();
+
+                let text = `Привет, Гор! Меня зовут ${name}.\n\n${message}`;
+                if (email) {
+                    text += `\n\nМой контакт для связи: ${email}`;
+                }
+
+                const tgUrl = `https://t.me/whatrushik?text=${encodeURIComponent(text)}`;
+                window.open(tgUrl, '_blank');
+            });
         }
 
         /* --- PRELOADER --- */
@@ -965,27 +1080,6 @@
             check();
         }
 
-        /* --- PROJECT FILTERS --- */
-        function initProjectFilters() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    const filter = btn.getAttribute('data-filter');
-                    document.querySelectorAll('.project-card').forEach(card => {
-                        const cat = card.getAttribute('data-category');
-                        if (filter === 'all' || cat === filter) {
-                            card.classList.remove('hidden');
-                            card.style.opacity = '1';
-                        } else {
-                            card.classList.add('hidden');
-                        }
-                    });
-                });
-            });
-        }
-
         /* --- CANVAS PARTICLES --- */
         function initFounderCanvas() {
             const container = document.querySelector('.founder-visual');
@@ -1061,31 +1155,6 @@
             });
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-            });
-        }
-
-        /* --- CONTACT FORM --- */
-        function initContactForm() {
-            const form = document.getElementById('contact-form');
-            const statusMsg = document.getElementById('form-status');
-            if (!form || !statusMsg) return;
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const submitBtn = form.querySelector('.form-submit');
-                const origText = submitBtn.innerHTML;
-
-                submitBtn.innerHTML = 'Отправка...';
-                submitBtn.disabled = true;
-
-                setTimeout(() => {
-                    statusMsg.textContent = 'Спасибо! Ваше сообщение принято.';
-                    statusMsg.className = 'form-status success';
-                    form.reset();
-                    submitBtn.innerHTML = origText;
-                    submitBtn.disabled = false;
-                    setTimeout(() => statusMsg.className = 'form-status', 4000);
-                }, 800);
             });
         }
 
