@@ -1,28 +1,28 @@
 {
     "hero": {
-        "slogan_start": "Don't ask WHAT",
+        "slogan_start": "Don't ask WHAT.",
         "slogan_highlight": "Be the WHAT.",
-        "description": "Независимая технологическая лаборатория. Проектируем высокопроизводительные системы, разрабатываем масштабируемую инфраструктуру и создаем иммерсивные веб-интерфейсы нового поколения."
+        "description": "Сообщество инженеров и креативных разработчиков. Беремся за сильные идеи и превращаем их в работающие продукты: от кроссплатформенных мобильных приложений до чистого веба и инфраструктуры."
     },
     "about": {
-        "title": "Инженерия и эстетика",
-        "subtitle": "Мы объединяем строгую системную архитектуру и передовой визуальный дизайн.",
-        "description_huge": "Команда разработчиков, инженеров и дизайнеров, создающая программные продукты на стыке технологий и визуальной культуры. <strong>WHAT Technologies</strong> фокусируется на производительности, надежности и внимании к каждой детали взаимодействия.",
+        "title": "Инженерия и практика",
+        "subtitle": "Мы создаем продукты полного цикла — от идеи и архитектуры до дизайна и релиза.",
+        "description_huge": "Команда разработчиков, решающая реальные задачи через современный стек. <strong>WHAT Technologies</strong> объединяет опыт побед во всероссийских хакатонах, коммерческую разработку и создание решений, которыми ежедневно пользуются тысячи людей.",
         "cards": [
             {
-                "num": "01 / ARCHITECTURE",
-                "title": "Системная разработка",
-                "desc": "Проектирование масштабируемых и отказоустойчивых сервисов на Rust, Go и TypeScript."
+                "num": "01 / MULTIPLATFORM",
+                "title": "Mobile & Compose",
+                "desc": "Нативная и кроссплатформенная разработка под Android и десктоп на Kotlin, Jetpack Compose и CMP."
             },
             {
-                "num": "02 / INTERFACES",
-                "title": "Иммерсивный Web",
-                "desc": "Создание уникального интерактивного опыта с использованием WebGL, WebGPU и микроанимаций."
+                "num": "02 / WEB DEVELOPMENT",
+                "title": "Веб-интерфейсы",
+                "desc": "Создание быстрых адаптивных сайтов и сервисов на чистом стеке (HTML/CSS/JS) и React."
             },
             {
-                "num": "03 / INFRASTRUCTURE",
-                "title": "DevOps и безопасность",
-                "desc": "Развертывание Zero-Trust сетей, CI/CD пайплайнов и распределенной облачной инфраструктуры."
+                "num": "03 / BACKEND & BOTS",
+                "title": "Бэкенд и автоматизация",
+                "desc": "Разработка API, высоконагруженных Telegram/Discord-ботов и парсеров на Python и Kotlin Ktor."
             }
         ]
     },
@@ -30,132 +30,84 @@
         {
             "id": "proj-1",
             "category": "interfaces",
-            "category_label": "Интерфейсы",
-            "title": "W.H.A.T. OS",
-            "description": "Интерактивная веб-среда рабочего стола с оконным менеджером, виртуальным терминалом и аппаратным ускорением.",
+            "category_label": "Mobile / Android",
+            "title": "WHAT Schedule",
+            "description": "Умное мобильное приложение расписания для студентов РКСИ и ведущих вузов юга России. Автономная работа, виджеты и интеграция с учебными планами.",
             "tech": [
-                "JavaScript",
-                "WebGL",
-                "WebAudio API"
+                "Kotlin",
+                "Jetpack Compose",
+                "Koin",
+                "Ktor",
+                "Room",
+                "Glance"
             ],
-            "long_description": "Экспериментальная веб-операционная система, работающая изолированно в браузере. Включает многооконный оконный менеджер, терминал с базовыми unix-командами, файловую систему в памяти и шейдерные фильтры постобработки.",
-            "screenshots": [
-                "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=600&auto=format&fit=crop"
-            ],
-            "github_url": "https://github.com/",
-            "download_url": ""
+            "long_description": "Официальное мобильное приложение-расписание, внедренное в Ростовском-на-Дону колледже связи и информатики (РКСИ) с активной аудиторией в ДГТУ, ИУБиП и РИНХ. Включает в себя кэширование расписания, быстрый поиск преподавателей и аудиторий, интерактивные виджеты главного экрана на Jetpack Glance и автономный оффлайн-режим. Проект полностью спроектирован, разработан и поддерживается нашей командой.",
+            "screenshots": [],
+            "github_url": "https://github.com/whatrushki/WHAT-Schedule-android",
+            "download_url": "https://github.com/whatrushki/WHAT-Schedule-android/releases"
         },
         {
             "id": "proj-2",
-            "category": "infra",
-            "category_label": "Инфраструктура",
-            "title": "Aura Core",
-            "description": "Высокопроизводительный движок динамической стилизации интерфейсов с компиляцией в WebAssembly.",
+            "category": "interfaces",
+            "category_label": "Веб-разработка",
+            "title": "Urartu Ensemble Web",
+            "description": "Официальный промо-сайт и медиа-платформа ансамбля армянских народных и этнических танцев «Урарту».",
             "tech": [
-                "Rust",
-                "WebAssembly",
-                "CSS Engines"
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "UI/UX Design"
             ],
-            "long_description": "Aura Core оптимизирует работу с динамическими стилями в нагруженных интерфейсах. Написан на Rust, компилируется в WASM и гарантирует 120 FPS даже при сотнях одновременно анимируемых параметров.",
-            "screenshots": [
-                "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop"
-            ],
-            "github_url": "https://github.com/",
-            "download_url": ""
-        },
-        {
-            "id": "proj-3",
-            "category": "labs",
-            "category_label": "Лаборатория",
-            "title": "Nebula Engine",
-            "description": "Генеративный рендерер частиц на базе WebGPU с физической симуляцией на стороне видеокарты.",
-            "tech": [
-                "WebGPU",
-                "WGSL",
-                "Compute Shaders"
-            ],
-            "long_description": "Графическая библиотека для браузеров следующего поколения. Позволяет симулировать до 1,000,000 частиц в реальном времени с поддержкой интерактивного гравитационного поля курсора.",
-            "screenshots": [
-                "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=600&auto=format&fit=crop"
-            ],
-            "github_url": "https://github.com/",
-            "download_url": ""
-        },
-        {
-            "id": "proj-4",
-            "category": "infra",
-            "category_label": "Инфраструктура",
-            "title": "Synapse Protocol",
-            "description": "Низкозадержечный сетевой протокол обмена сообщениями в реальном времени поверх QUIC.",
-            "tech": [
-                "Go",
-                "Protobuf",
-                "QUIC"
-            ],
-            "long_description": "Легковесный сетевой протокол с автоматическим мультиплексированием и шифрованием, разработанный для приложений реального времени и нестабильных мобильных сетей.",
+            "long_description": "Медийный веб-ресурс танцевального ансамбля «Урарту». Полностью адаптивная верстка, плавная анимация взаимодействия, интеграция медиа-галереи и форм обратной связи для концертных площадок и мероприятий.",
             "screenshots": [],
-            "github_url": "https://github.com/",
-            "download_url": ""
+            "github_url": "https://github.com/whatrushki/urartu",
+            "download_url": "https://whatrushki.github.io/urartu/"
         }
     ],
     "founder": {
-        "name": "W.H.A.T. Architect",
-        "role": "Основатель & Lead Architect",
-        "image": "",
-        "bio": "Привет. Я основатель <strong>WHAT Technologies</strong>. Наш фокус — создание продуктов, где высокая техническая надежность гармонично сочетается с продуманным дизайном и вниманием к деталям.\n\nМы разрабатываем решения на базе открытого исходного кода, экспериментируем с передовыми стандартами веба и проектируем системы, рассчитанные на долгий срок службы.",
+        "name": "Гор",
+        "role": "FOUNDER & LEAD DEVELOPER",
+        "image": "assets/gor.png",
+        "bio": "Привет! Я основатель <strong>WHAT Technologies</strong>. Студент 3-го курса РКСИ, Fullstack & Mobile-разработчик с 4 годами опыта в IT и победами в более чем 7 всероссийских и региональных хакатонах. Финалист чемпионата «Профессионалы».\n\nСпециализируюсь на Kotlin (Android, Compose Multiplatform, Ktor), Python и веб-разработке. Совмещаю системный инженерный подход с креативным мышлением: от архитектуры и мобильных CRM до дизайна и общественной деятельности.",
         "stats": [
             {
-                "value": "10",
-                "label": "Лет в разработке"
+                "value": "4+",
+                "label": "Года в разработке"
             },
             {
-                "value": "50M",
-                "label": "Обработанных событий"
+                "value": "7+",
+                "label": "Побед в хакатонах"
             },
             {
-                "value": "15",
-                "label": "Open-Source релизов"
+                "value": "100%",
+                "label": "Практический стек"
             }
         ]
     },
     "team": [
         {
             "id": "member-1",
-            "name": "Alex Mercer",
-            "role": "Systems Engineer",
-            "image": "",
-            "description": "Специалист по распределенным протоколам и низкоуровневой разработке на Rust и Go.",
-            "github": "https://github.com",
+            "name": "Егор",
+            "role": "Vibe Manager & Community",
+            "image": "assets/egor.png",
+            "description": "Душа команды. Отвечает за атмосферу в команде.",
+            "github": "https://github.com/EgorVorOK",
             "twitter": "",
             "linkedin": "",
-            "telegram": "https://t.me",
+            "telegram": "https://t.me/egorvorok",
             "instagram": "",
             "vk": ""
         },
         {
             "id": "member-2",
-            "name": "Elena Vance",
-            "role": "Design Director",
-            "image": "",
-            "description": "Проектирует UI/UX дизайн-системы, визуальный брендинг и интерактивную WebGL-графику.",
-            "github": "",
+            "name": "Айк",
+            "role": "Linux & AI Engineer",
+            "image": "assets/hayk.png",
+            "description": "Специалист по Linux-инфраструктуре, нейросетевым технологиям, интеграции искусственного интеллекта и автоматизации систем.",
+            "github": "https://github.com/Hayk134",
             "twitter": "",
             "linkedin": "",
-            "telegram": "https://t.me",
-            "instagram": "",
-            "vk": ""
-        },
-        {
-            "id": "member-3",
-            "name": "Marcus Brody",
-            "role": "DevOps & Security",
-            "image": "",
-            "description": "Отвечает за инфраструктуру, Kubernetes-кластеры, автоматизацию деплоя и сетевую безопасность.",
-            "github": "https://github.com",
-            "twitter": "",
-            "linkedin": "",
-            "telegram": "https://t.me",
+            "telegram": "https://t.me/Gazan_team",
             "instagram": "",
             "vk": ""
         }
@@ -163,21 +115,21 @@
     "footer": {
         "cta_title_start": "Давайте создадим",
         "cta_title_highlight": "что-то стоящее.",
-        "cta_description": "Готовы обсудить ваш проект, архитектуру решения или совместную работу? Напишите нам на почту.",
-        "contact_email": "hello@what.tech",
+        "cta_description": "Готовы обсудить ваш проект, архитектуру решения или совместную работу? Напишите нам.",
+        "contact_email": "gorogannisan641@gmail.com",
         "copyright": "WHAT Technologies. Все права защищены.",
         "socials": [
             {
-                "name": "GitHub",
-                "url": "https://github.com"
+                "name": "GitHub Организации",
+                "url": "https://github.com/whatrushki"
             },
             {
-                "name": "Telegram",
-                "url": "https://t.me"
+                "name": "Telegram Канал",
+                "url": "https://t.me/whatrushki"
             },
             {
-                "name": "Twitter / X",
-                "url": "https://twitter.com"
+                "name": "Telegram Основателя",
+                "url": "https://t.me/whatrushik"
             }
         ]
     }
