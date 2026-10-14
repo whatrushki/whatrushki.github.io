@@ -427,26 +427,22 @@
                 <span class="founder-title">FOUNDER & LEAD DEVELOPER</span>
 
                 <div class="founder-bio">
-                    <p>Привет! Я Гор — учусь на 3-м курсе РКСИ, пишу код и развиваю <strong>WHAT</strong>. Люблю
-                        создавать полезные штуки, которыми пользуются студенты и друзья (например, приложение расписания
-                        WHAT Schedule).</p>
-                    <p>В основном пишу на Kotlin под Android (Jetpack Compose, Compose Multiplatform), работаю с
-                        бэкендом на Python и вебом. Часто участвую в хакатонах, ценю аккуратную архитектуру, отзывчивый
-                        UI и командный драйв.</p>
+                    <p>Разрабатываю нативные и мультиплатформенные приложения на <strong>Kotlin</strong> (Jetpack Compose, Compose Multiplatform / KMP), связывая их с бэкендом на <strong>Python / Ktor</strong> и современным вебом.</p>
+                    <p>Люблю понятную архитектуру, быстрые интерфейсы и решения, которые закрывают реальные потребности пользователей — как система расписания <strong>WHAT Schedule</strong>, внедренная для тысяч студентов. Регулярно побеждаю на хакатонах, где за 48 часов с нуля собираю работающий MVP от идеи до релиза.</p>
                 </div>
 
                 <div class="founder-stats">
-                    <div class="stat-item">
-                        <span class="stat-val">4+</span>
-                        <span class="stat-lbl">Года в коде</span>
-                    </div>
                     <div class="stat-item">
                         <span class="stat-val">7+</span>
                         <span class="stat-lbl">Побед на хакатонах</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-val">100%</span>
-                        <span class="stat-lbl">Свои проекты</span>
+                        <span class="stat-val">4+</span>
+                        <span class="stat-lbl">Года разработки</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">48ч</span>
+                        <span class="stat-lbl">Скорость сборки MVP</span>
                     </div>
                 </div>
             </div>
@@ -473,30 +469,39 @@
     <footer class="footer-container" id="contact">
         <div class="footer-top">
             <div class="footer-cta reveal">
-                <h2 class="footer-cta-title">Есть идея?<br><span>Давай реализуем.</span></h2>
-                <p class="footer-cta-desc">Хочешь обсудить проект, предложить сотрудничество или присоединиться к нам?
-                    Напиши напрямую основателю в Telegram.</p>
+                <h2 class="footer-cta-title">Есть задача или идея?<br><span>Давай обсудим.</span></h2>
+                <p class="footer-cta-desc">Хочешь запустить проект, обсудить архитектуру или пригласить на хакатон?
+                    Напиши напрямую основателю в Telegram — ответим быстро и по делу.</p>
             </div>
 
-            <div class="footer-form-container reveal">
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Ваше имя</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Александр" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email или контакт для связи (опционально)</label>
-                        <input type="text" id="email" name="email" class="form-input"
-                            placeholder="@telegram_nick или alex@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Сообщение или задача</label>
-                        <textarea id="message" name="message" class="form-input" rows="4"
-                            placeholder="Опишите вашу идею или вопрос..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary form-submit">Написать в Telegram →</button>
-                    <div class="form-status" id="form-status"></div>
-                </form>
+            <div class="footer-contact-card reveal">
+                <div class="contact-status-badge">
+                    <span class="status-dot"></span>
+                    <span>На связи в Telegram</span>
+                </div>
+                
+                <a href="https://t.me/whatrushik" target="_blank" rel="noopener" class="btn btn-primary contact-main-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                    <span>Написать Гору в Telegram</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+
+                <div class="contact-channels">
+                    <a href="https://t.me/whatrushki" target="_blank" rel="noopener" class="contact-channel-item">
+                        <div class="channel-info">
+                            <span class="channel-title">Telegram Канал</span>
+                            <span class="channel-desc">Новости, релизы и внутрянка проектов</span>
+                        </div>
+                        <span class="channel-arrow">↗</span>
+                    </a>
+                    <a href="mailto:gorogannisan641@gmail.com" class="contact-channel-item">
+                        <div class="channel-info">
+                            <span class="channel-title">Email для связи</span>
+                            <span class="channel-desc">gorogannisan641@gmail.com</span>
+                        </div>
+                        <span class="channel-arrow">↗</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -534,27 +539,27 @@
             "hero": {
                 "slogan_start": "Don't ask WHAT.",
                 "slogan_highlight": "Be the WHAT.",
-                "description": "Сообщество инженеров и креативных разработчиков. Беремся за сильные идеи и превращаем их в работающие продукты: от кроссплатформенных мобильных приложений на Compose до чистого веба и инфраструктуры."
+                "description": "Сообщество инженеров и креативных разработчиков. Беремся за сильные идеи и превращаем их в работающие продукты: от нативных мобильных приложений на Compose до быстрых веб-сервисов и автоматизации."
             },
             "about": {
                 "title": "Идеи и реализация",
                 "subtitle": "Создаем цифровые продукты полного цикла — от идеи и архитектуры до релиза.",
-                "description_huge": "Мы — открытое сообщество разработчиков и дизайнеров. Собираем креативных людей вокруг классных идей и вместе превращаем их в живые проекты — от мобильных приложений до нестандартного веба и ботов.",
+                "description_huge": "Мы — независимая команда разработчиков и дизайнеров. Объединяем креативных людей вокруг сильных идей и создаем честные, быстрые и удобные решения — от мобильных экосистем до коммерческого веба.",
                 "cards": [
                     {
-                        "num": "01 / MULTIPLATFORM",
+                        "num": "01 / MOBILE FIRST",
                         "title": "Mobile & Compose",
-                        "desc": "Нативная и кроссплатформенная разработка под Android и десктоп на Kotlin, Jetpack Compose и CMP."
+                        "desc": "Нативная и мультиплатформенная разработка под Android и десктоп на Kotlin, Jetpack Compose и KMP."
                     },
                     {
-                        "num": "02 / WEB DEVELOPMENT",
+                        "num": "02 / PRODUCT WEB",
                         "title": "Веб-интерфейсы",
-                        "desc": "Создание быстрых адаптивных сайтов и сервисов на чистом стеке (HTML/CSS/JS) и React."
+                        "desc": "Проектирование и верстка быстрых сайтов, сервисов и удобных интерфейсов на чистом стеке и React."
                     },
                     {
-                        "num": "03 / BACKEND & BOTS",
-                        "title": "Бэкенд и автоматизация",
-                        "desc": "Разработка API, высоконагруженных Telegram/Discord-ботов и парсеров на Python и Kotlin Ktor."
+                        "num": "03 / INFRA & AUTOMATION",
+                        "title": "Бэкенд и боты",
+                        "desc": "Разработка серверных API, асинхронных ботов Telegram/Discord и инструментов автоматизации на Python и Ktor."
                     }
                 ]
             },
@@ -564,68 +569,74 @@
                     "category": "mobile",
                     "category_label": "Мобильные приложения",
                     "title": "WHAT Schedule",
-                    "description": "Умное мобильное приложение расписания для студентов РКСИ и ведущих вузов юга России. Автономная работа, виджеты и интеграция с учебными планами.",
-                    "tech": ["Kotlin", "Jetpack Compose", "Koin", "Ktor", "Room", "Glance Widgets"],
-                    "long_description": "Официальное мобильное приложение-расписание, внедренное в Ростовском-на-Дону колледже связи и информатики (РКСИ) с активной аудиторией в ДГТУ, ИУБиП и РИНХ. Включает в себя кэширование расписания, быстрый поиск преподавателей и аудиторий, интерактивные виджеты главного экрана на Jetpack Glance и автономный оффлайн-режим.",
+                    "description": "Приложение расписания для студентов: работает без интернета и выводит пары прямо на виджет рабочего стола.",
+                    "tech": [
+                        "Android",
+                        "Kotlin",
+                        "Jetpack Compose",
+                        "Оффлайн-режим",
+                        "Виджеты Glance"
+                    ],
+                    "long_description": "Официальный сайт колледжа с расписанием часто виснет, а искать свою группу в таблицах с телефона — мучение. Мы сделали удобное мобильное приложение, которое решает эту проблему раз и навсегда.\n\nЧто внутри:\n• Работает без интернета: один раз загрузил расписание — и оно открывается моментально даже в подвале колледжа, где нет связи.\n• Виджет на экран: номер кабинета, предмет и преподаватель видны сразу на рабочем столе смартфона, даже открывать приложение не нужно.\n• Быстрый поиск: моментально находит расписание любой группы или преподавателя.\n\nРезультат: приложением каждый день активно пользуются сотни студентов и преподавателей РКСИ.",
                     "screenshots": [],
-                    "github_url": "https://github.com/whatrushki/WHAT-Schedule-android",
-                    "download_url": "https://github.com/whatrushki/WHAT-Schedule-android/releases"
+                    "github_url": "https://github.com/whatrushki/schedule",
+                    "download_url": "https://github.com/whatrushki/schedule/releases"
                 },
                 {
                     "id": "proj-2",
                     "category": "web",
-                    "category_label": "Веб-разработка",
-                    "title": "Urartu Ensemble Web",
-                    "description": "Официальный промо-сайт и медиа-платформа ансамбля армянских народных и этнических танцев «Урарту».",
-                    "tech": ["HTML5", "CSS3 / BEM", "JavaScript", "UI/UX Design"],
-                    "long_description": "Медийный веб-ресурс танцевального ансамбля «Урарту». Полностью адаптивная верстка, плавная анимация взаимодействия, интеграция медиа-галереи и форм обратной связи для концертных площадок и мероприятий.",
+                    "category_label": "Веб-сервисы",
+                    "title": "Лес Куб (Les Kub)",
+                    "description": "Сайт для оптовой базы пиломатериалов с умным калькулятором пересчета кубов в штуки и быстрым заказом в Telegram.",
+                    "tech": [
+                        "Калькулятор кубатуры",
+                        "Заказ в Telegram",
+                        "Каталог товаров",
+                        "JavaScript",
+                        "SEO"
+                    ],
+                    "long_description": "Коммерческий проект для базы пиломатериалов в Краснодаре и Адыгее. Главная проблема покупателей дерева — сложно посчитать, сколько штук досок или бруса нужно на определенный объем и сколько это будет стоить.\n\nЧто сделали:\n• Калькулятор на лету: клиент выбирает размеры доски, а сайт сам пересчитывает кубические метры в штуки и выводит точную стоимость.\n• Заказ в один клик: клиент собирает корзину, жмет кнопку, и готовый расчет со всеми параметрами сразу улетает менеджеру склада в Telegram.\n• Быстрая работа: сайт не перегружен тяжелыми движками, открывается мгновенно даже со слабого мобильного интернета на стройке.\n\nРезультат: реальный рабочий бизнес — клиенты сами считают заказ на сайте, а менеджеры получают готовые теплые заявки без долгих выяснений по телефону.",
                     "screenshots": [],
-                    "github_url": "https://github.com/whatrushki/urartu",
-                    "download_url": "https://whatrushki.github.io/urartu/"
+                    "github_url": "https://github.com/whatrushki/leskub",
+                    "download_url": "https://leskub.ru/"
                 },
                 {
                     "id": "proj-3",
-                    "category": "mobile",
-                    "category_label": "Мобильные приложения",
-                    "title": "IT-School Mobile Platform",
-                    "description": "Кроссплатформенное приложение для онлайн IT-школы на базе CRM с интерактивными тестами и RSocket-чатом.",
-                    "tech": ["Compose Multiplatform", "RSocket", "SQLDelight", "Koin", "Ktor"],
-                    "long_description": "Архитектурно сложное мобильное приложение, разработанное в рамках коммерческого стартапа. Включает RSocket-чат реального времени, встроенную систему интерактивного тестирования, систему оплаты курсов и отказоустойчивую оффлайн-синхронизацию.",
+                    "category": "web",
+                    "category_label": "Веб-интерфейсы",
+                    "title": "Urartu Ensemble",
+                    "description": "Атмосферный промо-сайт танцевального ансамбля с видео, афишей и формой заказа выступлений.",
+                    "tech": [
+                        "Промо-сайт",
+                        "Медиа-галерея",
+                        "Адаптивный дизайн",
+                        "Анимации",
+                        "JavaScript"
+                    ],
+                    "long_description": "Промо-сайт для ансамбля армянских народных танцев «Урарту». Коллективу нужна была стильная визитка в интернете, чтобы показывать уровень выступлений организаторам концертов и фестивалей.\n\nЧто сделали:\n• Визуальная подача: качественные фото и видео выступлений, плавная эстетичная анимация и удобная подача репертуара.\n• Заказ выступлений: простая и понятная форма для организаторов мероприятий, чтобы быстро связаться с руководством ансамбля.\n• Отличная адаптивность: сайт одинаково круто и быстро работает как на айфоне, так и на большом мониторе.\n\nРезультат: сайт работает как главная презентационная площадка ансамбля для заказчиков и зрителей.",
                     "screenshots": [],
-                    "github_url": "https://github.com/whatrushki",
-                    "download_url": ""
-                },
-                {
-                    "id": "proj-4",
-                    "category": "backend",
-                    "category_label": "Бэкенд и боты",
-                    "title": "WHAT Bot & Automation Engine",
-                    "description": "Модульная инфраструктура ботов и асинхронных парсеров для автоматизации сбора данных и CRM-систем.",
-                    "tech": ["Python", "FastAPI", "Disnake", "SQLAlchemy", "Docker"],
-                    "long_description": "Комплекс решений для автоматизации бизнес-процессов: Discord и Telegram боты с базой данных SQLAlchemy, фоновые парсеры данных и открытые Python-библиотеки, опубликованные в официальном репозитории PyPi.",
-                    "screenshots": [],
-                    "github_url": "https://github.com/whatrushki",
-                    "download_url": ""
+                    "github_url": "https://github.com/whatrushki/urartu",
+                    "download_url": "https://whatrushki.github.io/urartu/"
                 }
             ],
             "founder": {
                 "name": "Гор Оганнисян (whatrushik)",
                 "role": "FOUNDER & LEAD DEVELOPER",
-                "image": "assets/gor.jpg",
-                "bio": "Привет! Я Гор — учусь на 3-м курсе РКСИ, пишу код и развиваю <strong>WHAT</strong>. Люблю создавать полезные штуки, которыми пользуются студенты и друзья (например, приложение расписания WHAT Schedule).\n\nВ основном пишу на Kotlin под Android (Jetpack Compose, Compose Multiplatform), работаю с бэкендом на Python и вебом. Часто участвую в хакатонах, ценю аккуратную архитектуру, отзывчивый UI и командный драйв.",
+                "image": "assets/gor.webp",
+                "bio": "Разрабатываю нативные и мультиплатформенные приложения на <strong>Kotlin</strong> (Jetpack Compose, Compose Multiplatform / KMP), связывая их с бэкендом на <strong>Python / Ktor</strong> и современным вебом.\n\nЛюблю понятную архитектуру, быстрые интерфейсы и решения, которые закрывают реальные потребности пользователей — как система расписания <strong>WHAT Schedule</strong>, внедренная для тысяч студентов. Регулярно побеждаю на хакатонах, где за 48 часов с нуля собираю работающий MVP от идеи до релиза.",
                 "stats": [
-                    { "value": "4+", "label": "Года в коде" },
                     { "value": "7+", "label": "Побед на хакатонах" },
-                    { "value": "100%", "label": "Свои проекты" }
+                    { "value": "4+", "label": "Года разработки" },
+                    { "value": "48ч", "label": "Скорость сборки MVP" }
                 ]
             },
             "team": [
                 {
                     "id": "member-1",
                     "name": "Егор (EgorVorOK)",
-                    "role": "Core Developer & Community",
-                    "image": "",
-                    "description": "Разработчик ядра и активный участник проектов. Отвечает за логику сервисов, реализацию фичей и командную координацию.",
+                    "role": "Vibe & Community Manager",
+                    "image": "assets/egor.webp",
+                    "description": "Держит боевой дух команды, отвечает за командный вайб на хакатонах и развивает вовлечённое сообщество вокруг продуктов WHAT.",
                     "github": "https://github.com/EgorVorOK",
                     "telegram": "https://t.me/egorvorok"
                 },
@@ -633,22 +644,22 @@
                     "id": "member-2",
                     "name": "Айк (Hayk134)",
                     "role": "Linux & AI Engineer",
-                    "image": "",
+                    "image": "assets/hayk.webp",
                     "description": "Специалист по Linux-инфраструктуре, нейросетевым технологиям, интеграции искусственного интеллекта и автоматизации систем.",
                     "github": "https://github.com/Hayk134",
                     "telegram": "https://t.me/Gazan_team"
                 }
             ],
             "footer": {
-                "cta_title_start": "Есть идея?",
-                "cta_title_highlight": "Давай реализуем.",
-                "cta_description": "Хочешь обсудить проект, предложить сотрудничество или присоединиться к нам? Напиши напрямую основателю в Telegram.",
+                "cta_title_start": "Есть задача или идея?",
+                "cta_title_highlight": "Давай обсудим.",
+                "cta_description": "Хочешь запустить проект, обсудить архитектуру или пригласить на хакатон? Напиши напрямую основателю в Telegram — ответим быстро и по делу.",
                 "contact_email": "gorogannisan641@gmail.com",
                 "copyright": "WHAT Technologies. Все права защищены.",
                 "socials": [
-                    { "name": "GitHub Организации", "url": "https://github.com/whatrushki" },
+                    { "name": "GitHub", "url": "https://github.com/whatrushki" },
                     { "name": "Telegram Канал", "url": "https://t.me/whatrushki" },
-                    { "name": "Telegram Основателя", "url": "https://t.me/whatrushik" }
+                    { "name": "Написать Гору", "url": "https://t.me/whatrushik" }
                 ]
             }
         };
@@ -811,6 +822,13 @@
                 if (footerDesc) footerDesc.textContent = data.footer.cta_description;
                 const footerCopy = document.querySelector('.footer-copy');
                 if (footerCopy) footerCopy.innerHTML = `&copy; 2026 ${data.footer.copyright}`;
+
+                const cardEmailLink = document.querySelector('.contact-channels a[href^="mailto:"]');
+                if (cardEmailLink && data.footer.contact_email) {
+                    cardEmailLink.href = `mailto:${data.footer.contact_email}`;
+                    const desc = cardEmailLink.querySelector('.channel-desc');
+                    if (desc) desc.textContent = data.footer.contact_email;
+                }
 
                 const footerSocials = document.querySelector('.footer-bottom .footer-socials');
                 if (footerSocials) {
